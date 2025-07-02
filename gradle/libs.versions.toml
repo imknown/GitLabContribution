@@ -1,0 +1,99 @@
+[versions]
+isPreview = "false" # true
+
+agp = "8.11.0"
+
+buildToolsVersion = "36.0.0"
+buildToolsVersionPreview = "36.0.0"
+
+android-compileSdk = "36"
+android-compileSdkPreview = "C"
+android-minSdk = "24"
+android-targetSdk = "36"
+android-targetSdkPreview = "C"
+
+# https://maven.google.com
+# https://developer.android.com/jetpack/androidx/releases
+androidx-activity = "1.11.0-rc01"
+androidx-appcompat = "1.7.1"
+androidx-constraintlayout = "2.2.1"
+androidx-core = "1.16.0"
+androidx-espresso = "3.6.1"
+
+# https://repo.maven.apache.org/maven2/org/jetbrains/androidx/lifecycle
+# https://central.sonatype.com/artifact/org.jetbrains.androidx.lifecycle/lifecycle-common/versions
+androidx-lifecycle = "2.9.1"
+
+androidx-testExt = "1.2.1"
+
+# https://github.com/JetBrains/compose-hot-reload/releases
+# https://central.sonatype.com/artifact/org.jetbrains.compose.hot-reload/hot-reload-analysis/versions
+composeHotReload = "1.0.0-alpha11"
+# https://plugins.gradle.org/plugin/org.jetbrains.compose
+# https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html
+composeMultiplatform = "1.8.2"
+
+junit = "4.13.2"
+
+# https://github.com/JetBrains/kotlin/releases
+kotlin = "2.2.0"
+# https://github.com/Kotlin/kotlinx.coroutines/releases
+kotlinx-coroutines = "1.10.2"
+# https://github.com/Kotlin/kotlinx.serialization/releases
+kotlinx-serialization = "1.9.0"
+# https://github.com/Kotlin/kotlinx-datetime/releases
+kotlinx-datetime = "0.7.0"
+
+# https://github.com/ktorio/ktor/releases
+ktor = "3.1.3"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { module = "junit:junit", version.ref = "junit" }
+
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+
+ktor = { group = "io.ktor", name = "ktor", version.ref = "ktor" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-json = { group = "io.ktor", name = "ktor-client-json", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
+ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
+ktor-client-js = { group = "io.ktor", name = "ktor-client-js", version.ref = "ktor" }
+
+[bundles]
+ktor-common = [
+    "ktor-client-core",
+    "ktor-client-json",
+    "ktor-client-logging",
+    "ktor-client-serialization",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx-json"
+]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
