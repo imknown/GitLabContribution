@@ -1,16 +1,18 @@
 [versions]
 isPreview = "false" # true
 
-agp = "8.11.0"
+agp = "8.12.0-rc01"
 
 buildToolsVersion = "36.0.0"
 buildToolsVersionPreview = "36.0.0"
 
 android-compileSdk = "36"
-android-compileSdkPreview = "C"
+android-compileSdkPreview = "CANARY"
+
 android-minSdk = "24"
+
 android-targetSdk = "36"
-android-targetSdkPreview = "C"
+android-targetSdkPreview = "CANARY"
 
 # https://maven.google.com
 # https://developer.android.com/jetpack/androidx/releases
@@ -28,7 +30,7 @@ androidx-testExt = "1.2.1"
 
 # https://github.com/JetBrains/compose-hot-reload/releases
 # https://central.sonatype.com/artifact/org.jetbrains.compose.hot-reload/hot-reload-analysis/versions
-composeHotReload = "1.0.0-alpha11"
+composeHotReload = "1.0.0-beta04"
 # https://plugins.gradle.org/plugin/org.jetbrains.compose
 # https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-compatibility-and-versioning.html
 composeMultiplatform = "1.8.2"
@@ -36,16 +38,16 @@ composeMultiplatform = "1.8.2"
 junit = "4.13.2"
 
 # https://github.com/JetBrains/kotlin/releases
-kotlin = "2.2.0"
+kotlin = "2.2.10-RC"
 # https://github.com/Kotlin/kotlinx.coroutines/releases
 kotlinx-coroutines = "1.10.2"
 # https://github.com/Kotlin/kotlinx.serialization/releases
 kotlinx-serialization = "1.9.0"
 # https://github.com/Kotlin/kotlinx-datetime/releases
-kotlinx-datetime = "0.7.0"
+kotlinx-datetime = "0.7.1"
 
 # https://github.com/ktorio/ktor/releases
-ktor = "3.1.3"
+ktor = "3.2.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
