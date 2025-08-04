@@ -1,7 +1,7 @@
 [versions]
 isPreview = "false" # true
 
-agp = "8.12.0-rc01"
+agp = "8.12.0"
 
 buildToolsVersion = "36.0.0"
 buildToolsVersionPreview = "36.0.0"
@@ -19,14 +19,14 @@ android-targetSdkPreview = "CANARY"
 androidx-activity = "1.11.0-rc01"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
-androidx-core = "1.16.0"
-androidx-espresso = "3.6.1"
+androidx-core = "1.17.0-rc01"
+androidx-espresso = "3.7.0"
 
 # https://repo.maven.apache.org/maven2/org/jetbrains/androidx/lifecycle
 # https://central.sonatype.com/artifact/org.jetbrains.androidx.lifecycle/lifecycle-common/versions
 androidx-lifecycle = "2.9.1"
 
-androidx-testExt = "1.2.1"
+androidx-testExt = "1.3.0"
 
 # https://github.com/JetBrains/compose-hot-reload/releases
 # https://central.sonatype.com/artifact/org.jetbrains.compose.hot-reload/hot-reload-analysis/versions
@@ -47,7 +47,7 @@ kotlinx-serialization = "1.9.0"
 kotlinx-datetime = "0.7.1"
 
 # https://github.com/ktorio/ktor/releases
-ktor = "3.2.2"
+ktor = "3.2.3"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
